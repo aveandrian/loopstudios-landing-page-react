@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Alata', sans-serif;
+/* font-family: 'Josefin Sans', sans-serif; */
+}
+
+body {
+  min-height: 100vh;
+}
+
+p {
+  font-size: 0.938rem;
+  color: hsl(0, 0%, 55%);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 6.25rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 3.125rem 9.375rem;
+  padding-bottom: 6.25rem;
+  gap: 8.125rem; 
+  position: relative;
+  overflow: hidden;
+}
+
+header > picture, .bg-img {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  z-index: -1;
+}
+
+.header-container {
+  border: 0.125rem solid white;
+  width: 60%;
+  padding: 1.25rem;
+}
+
+.header-title {
+  color: white;
+  font-size: 4.688rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+
+.main-header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 0 9.375rem;
+}
+
+.main-header-img-container {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 3;
+}
+
+.main-content {
+  grid-column: 4 / span 3;
+  grid-row: 2 / span 2;
+  background-color: white;
+  padding: 3.75rem;
+}
+
+.main-content-title {
+  font-size: 3.125rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.creations-grid {
+  padding: 0 9.375rem;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4,auto );
+  grid-template-rows: repeat(2,auto );
+  justify-content:space-between;
+  row-gap: 1.25rem;
+}
+
+.creations-item {
+  position: relative;
+  width: fit-content;
+}
+
+.creations-title {
+  font-size: 3.125rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  grid-column: 1 / span 2;
+}
+
+.creations-btn {
+  width: 200px;
+  height: 3.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  background-color: white;
+  border: 0.063rem solid black;
+  grid-column: 3 / span 2;
+  justify-self: end;
+}
+
+.creations-btn:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.creations-item:hover {
+  cursor: pointer;
+}
+
+.creations-item:hover img {
+  filter: opacity(0.5)
+}
+
+.creations-item:hover .item-title {
+  color: black
+}
+
+
+.item-title {
+  bottom: 3.125rem;
+  left: 1.875rem;
+  position: absolute;
+  color: white;
+  font-size: 2.375rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.footer-section {
+  color: white;
+  background-color: black;
+  padding: 1.25rem 9.375rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.creds {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.footer-logo {
+  width: 70%;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-links > a:hover {
+  cursor: pointer;
+}
+
+.footer-links > a:hover::after {
+ content: "";
+ position: relative;
+ background-color: white;
+ height: 0.125rem;
+ width: 50%;
+ cursor: pointer;
+ bottom: -0.313rem;
+ left: 25%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1.25rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.social-icon-container {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.social-icon-container:hover {
+  cursor: pointer;
+}
+
+.social-icon-container:hover::after {
+ content: "";
+ position: relative;
+ background-color: white;
+ height: 0.125rem;
+ width: 0.625rem;
+ cursor: pointer;
+ bottom: -0.313rem;
+ left: 25%;
+}
+
+
+.attribution, .attribution > a {
+  margin-top: 1.25rem;
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 1250px) { 
+  header, .main-header, .creations-section, .footer-section, .main-content {
+    padding: 1.25rem;
+  } 
+  header {
+    height: fit-content;
+  }
+
+  .main-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-container {
+    width: 100%;
+  }
+
+  .header-title, .main-content-title, .creations-title {
+    font-size: 2rem;
+  }
+
+  .main-header-img-container {
+    padding: 1.25rem;
+    overflow: hidden;
+  }
+
+  .main-header-img {
+    width: 100%;
+  }
+
+  .creations-grid {
+    padding: 1.25rem;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, auto);
+    justify-items: center;
+  }
+  .creations-item > picture > img {
+    width: 100%;
+  }
+  .creations-title, .creations-btn {
+    grid-column: 1;
+  }
+
+  .creations-btn {
+    grid-row: 10;
+    justify-self: center;
+  }
+
+  .item-title {
+    font-size: 2rem;
+    bottom: 0.625rem;;
+    left: 0.625rem;
+    width: 50%;
+  }
+
+  .footer-main, .footer-links, .socials, .creds {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-main {
+    gap: 1.25rem;
+  }
+}
