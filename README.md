@@ -19,4 +19,4 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![image](https://github.com/aveandrian/loopstudios-landing-page-react/assets/13519212/8f8ef4ef-188c-497a-9d99-b577d7838b21)
